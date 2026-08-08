@@ -1,3 +1,7 @@
+//
+// Created by Robo_Start on 05.08.2026
+//
+
 #ifndef TASKS_H
 #define TASKS_H
 enum GlobalTasks {
