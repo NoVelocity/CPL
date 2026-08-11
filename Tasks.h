@@ -8,13 +8,13 @@ enum GlobalTasks {
     INIT = 0,
     RESET = 1
 };
-enum class StepperTasks {
+enum StepperTasks {
     STOP = 50,
     FOR = 51,
     UNTIL = 52
 };
 enum DebuggerTasks {
-    STATUS = 100
+    ROBOT_STATUS = 100
 };
 enum NetworkTasks {
     CONNECT = 200,
