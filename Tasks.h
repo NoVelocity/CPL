@@ -11,7 +11,10 @@ enum GlobalTasks {
 enum StepperTasks {
     STOP = 50,
     FOR = 51,
-    UNTIL = 52
+    UNTIL = 52,
+    STATE = 60,
+    ENABLE = 61,
+    DISABLE = 62
 };
 enum DebuggerTasks {
     ROBOT_STATUS = 100
