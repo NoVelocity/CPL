@@ -25,6 +25,12 @@ String JsonUtility::jsonToString(const JsonDocument &doc, bool prettify = false)
 }
  
 void JsonUtility::jsonToSerial(const JsonDocument &doc, HardwareSerial &serial) {
-    serializeJson(doc, serial);
+    JsonDocument dbgDoc;
+    dbgDoc["task"] = DEBUG;
+    dbgDoc["payload"] = doc;
+    serializeJson(dbgDoc, Serial);
     Serial.println();
+
+    serializeJson(doc, serial);
+    serial.println();
 }
