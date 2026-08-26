@@ -6,7 +6,8 @@
 #define TASKS_H
 enum GlobalTasks {
     INIT = 1,
-    RESET = 2
+    RESET = 2,
+    DEBUG = 5
 };
 enum StepperTasks {
     STOP = 50,
