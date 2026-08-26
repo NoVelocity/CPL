@@ -6,6 +6,7 @@
 #define JSONUTILITY_H
 #include <Arduino.h>
 #include <ArduinoJson.h>
+#include "Tasks.h"
  
 class JsonUtility {
 public:
