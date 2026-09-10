@@ -7,7 +7,11 @@
 enum GlobalTasks {
     INIT = 1,
     RESET = 2,
-    DEBUG = 5
+    DEBUG = 5,
+    SEND_DEBUG_FROM_NC = 10,
+    SEND_DEBUG_FROM_MODULE = 11,
+    SEND_DEBUG_TO_NC = 15,
+    SEND_DEBUG_TO_M = 16
 };
 enum StepperTasks {
     STOP = 50,
