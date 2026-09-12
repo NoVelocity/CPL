@@ -24,7 +24,7 @@ String JsonUtility::jsonToString(const JsonDocument &doc, bool prettify = false)
     return output;
 }
  
-void JsonUtility::jsonToSerial(const JsonDocument &doc, HardwareSerial &serial) {
+void JsonUtility::jsonToSerial(JsonVariantConst doc, HardwareSerial &serial) {
     #ifdef DEBUG_MODE
         JsonDocument dbgDoc;
         dbgDoc["task"] = DEBUG;
