@@ -9,7 +9,7 @@ enum GlobalTasks {
     RESET = 2,
     DEBUG = 5,
     SEND_DEBUG_FROM_NC = 10,
-    SEND_DEBUG_FROM_MODULE = 11,
+    SEND_DEBUG_FROM_M = 11,
     SEND_DEBUG_TO_NC = 15,
     SEND_DEBUG_TO_M = 16
 };
@@ -22,7 +22,8 @@ enum StepperTasks {
     DISABLE = 62
 };
 enum DebuggerTasks {
-    ROBOT_STATUS = 100
+    ROBOT_STATUS = 100,
+    MEMORY_READ = 150
 };
 enum NetworkTasks {
     CONNECT = 200,
