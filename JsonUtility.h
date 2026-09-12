@@ -14,7 +14,7 @@ public:
  
     static String jsonToString(const JsonDocument &doc, bool prettify);
  
-    static void jsonToSerial(const JsonDocument &doc, HardwareSerial &serial);
+    static void jsonToSerial(JsonVariantConst doc, HardwareSerial &serial);
 };
  
  
