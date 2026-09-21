@@ -29,7 +29,8 @@ enum NetworkTasks {
     CONNECT = 200,
     CONNECTED = 201,
     RECEIVE = 202,
-    SEND = 203
+    SEND = 203,
+    PING = 205
 };
 enum ModuleTasks {
  
