@@ -24,7 +24,7 @@ String JsonUtility::jsonToString(const JsonDocument &doc, bool prettify = false)
     return output;
 }
  
-void JsonUtility::jsonToSerial(JsonVariantConst doc, HardwareSerial &serial) {
+void JsonUtility::jsonToSerial(JsonVariantConst doc, HardwareSerial &serial, bool networkCardMode) {
     #ifdef DEBUG_MODE
         JsonDocument dbgDoc;
         dbgDoc["task"] = DEBUG;
@@ -33,6 +33,15 @@ void JsonUtility::jsonToSerial(JsonVariantConst doc, HardwareSerial &serial) {
         Serial.println();
     #endif
 
-    serializeJson(doc, serial);
+    JsonDocument thing;
+    if (!networkCardMode) {
+        thing = doc;
+    } else {
+        thing["task"] = 203;
+        thing["destination"] = "unity";
+        thing["payload"] = doc;
+    }
+
+    serializeJson(thing, serial);
     serial.println();
 }
