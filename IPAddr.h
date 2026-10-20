@@ -12,9 +12,11 @@ public:
 
     static char **split(char **argv, int *argc, char *string, char delimiter, int allowEmpty);
 
-    IPAddr(const uint8_t ipBlock1, const uint8_t ipBlock2, const uint8_t ipBlock3, const uint8_t ipBlock4);
+    IPAddr(uint8_t ipBlock1, uint8_t ipBlock2, uint8_t ipBlock3, uint8_t ipBlock4);
 
-    IPAddr(String ipString);
+    explicit IPAddr(String ipString);
+
+    IPAddr();
 
     String toString() const;
 };
