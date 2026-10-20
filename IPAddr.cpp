@@ -25,6 +25,13 @@ IPAddr::IPAddr(String ipString) {
     }
 }
 
+IPAddr::IPAddr() {
+    ip[0] = 0;
+    ip[1] = 0;
+    ip[2] = 0;
+    ip[3] = 0;
+}
+
 String IPAddr::toString() const {
     return String(ip[0]) + "." +
            String(ip[1]) + "." +
